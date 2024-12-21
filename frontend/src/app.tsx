@@ -1,20 +1,15 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import Appointments from './pages/Appointments';
+import AppointmentForm from './components/AppointmentForm';
+import AppointmentList from './components/AppointmentList';
 
 const App = () => {
   return (
-    <Router>
-      <div className="App">
-        <h1>Booking App</h1>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/appointments" element={<Appointments />} />
-        </Routes>
-      </div>
-    </Router>
+    <div>
+      <h1>Barber Appointment Booking</h1>
+      <AppointmentForm />
+      <AppointmentList />
+    </div>
   );
-}
+};
 
 export default App;
